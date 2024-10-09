@@ -42,7 +42,7 @@ struct TemperatureView: View {
                     TempUnitSelector(unit:$unitConverted)
                 }
             }
-            .navigationTitle("Temperature")
+            .navigationTitle("🌡️ Temperature")
             .toolbar {
                 if valueIsFocused{
                     Button("Done") {
