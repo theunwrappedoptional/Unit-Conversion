@@ -8,51 +8,22 @@
 import SwiftUI
 
 struct LengthView: View {
-    
-    @FocusState private var valueIsFocused: Bool
-    @State private var valueToConvert: Double = 0
-    
-    let lengthsDict:[String: UnitLength] = [
-        "Meters": UnitLength.meters,
-        "Kilometers": UnitLength.kilometers,
-        "Feet": UnitLength.feet,
-        "Yards": UnitLength.yards,
-        "Miles": UnitLength.miles
-    ]
-
-    @State private var unitToConvert = "Meters"
-    @State private var unitConverted = "Yards"
-    
-    var convertedValue: Double{
-        let input = Measurement(value: valueToConvert, unit: lengthsDict[unitToConvert]!)
-        let output = input.converted(to: lengthsDict[unitConverted]!)
-        return output.value
-    }
+     
+    let lengthModel = MeasureViewModel(title: "📏 Length",
+                                      options: ["Meters", "Km", "Feet", "Yards", "Miles"],
+                                      units: [
+                                         "Meters": UnitLength.meters,
+                                         "Km": UnitLength.kilometers,
+                                         "Feet": UnitLength.feet,
+                                         "Yards": UnitLength.yards,
+                                         "Miles": UnitLength.miles
+                                     ],
+                                      valueToConvert: 0,
+                                      unitToConvert: "Meters",
+                                      unitConverted: "Km")
     
     var body: some View {
-        NavigationStack{
-            Form{
-                Section("Length in \(unitToConvert)") {
-                    TextField("Value to convert", value: $valueToConvert, format: .number)
-                        .keyboardType(.decimalPad)
-                        .focused($valueIsFocused)
-                    LenghtUnitSelector(unit:$unitToConvert)
-                }
-                
-                Section("Length in \(unitConverted)") {
-                    Text(String(format: "%.2f", convertedValue))
-                    LenghtUnitSelector(unit:$unitConverted)
-                }
-            }
-            .navigationTitle("📏 Length")
-            .toolbar {
-                if valueIsFocused{
-                    Button("Done") {
-                        valueIsFocused = false
-                    }
-                }
-            }
-        }
+        MeasureView(viewModel: lengthModel)
     }
 }
 
@@ -60,23 +31,3 @@ struct LengthView: View {
     LengthView()
 }
 
-struct LenghtUnitSelector: View {
-    
-    @Binding var unit: String
-    let lengths:[String] = [
-        "Meters",
-        "Kilometers",
-        "Feet",
-        "Yards",
-        "Miles"
-    ]
-    
-    var body: some View {
-        Picker("Length Unit", selection: $unit) {
-            ForEach(lengths, id: \.self) {
-                Text("\($0)")
-            }
-        }
-        .pickerStyle(.segmented)
-    }
-}

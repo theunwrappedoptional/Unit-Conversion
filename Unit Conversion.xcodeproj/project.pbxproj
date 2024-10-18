@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542ED2352CC2B6B30044FC4A /* MeasureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542ED2342CC2B6B30044FC4A /* MeasureViewModel.swift */; };
+		542ED2372CC2B7B70044FC4A /* MeasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542ED2362CC2B7B70044FC4A /* MeasureView.swift */; };
 		54F8BFBC2CB67FA400642B04 /* Unit_ConversionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F8BFBB2CB67FA400642B04 /* Unit_ConversionApp.swift */; };
 		54F8BFBE2CB67FA400642B04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F8BFBD2CB67FA400642B04 /* ContentView.swift */; };
 		54F8BFC02CB67FA700642B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F8BFBF2CB67FA700642B04 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542ED2342CC2B6B30044FC4A /* MeasureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewModel.swift; sourceTree = "<group>"; };
+		542ED2362CC2B7B70044FC4A /* MeasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureView.swift; sourceTree = "<group>"; };
 		54F8BFB82CB67FA400642B04 /* Unit Conversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Conversion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F8BFBB2CB67FA400642B04 /* Unit_ConversionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_ConversionApp.swift; sourceTree = "<group>"; };
 		54F8BFBD2CB67FA400642B04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		54F8BFBA2CB67FA400642B04 /* Unit Conversion */ = {
 			isa = PBXGroup;
 			children = (
+				542ED2342CC2B6B30044FC4A /* MeasureViewModel.swift */,
+				542ED2362CC2B7B70044FC4A /* MeasureView.swift */,
 				54F8BFBB2CB67FA400642B04 /* Unit_ConversionApp.swift */,
 				54F8BFBD2CB67FA400642B04 /* ContentView.swift */,
 				54F8BFC92CB680F200642B04 /* TemperatureView.swift */,
@@ -150,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F8BFCC2CB6811C00642B04 /* LengthView.swift in Sources */,
+				542ED2372CC2B7B70044FC4A /* MeasureView.swift in Sources */,
+				542ED2352CC2B6B30044FC4A /* MeasureViewModel.swift in Sources */,
 				54F8BFCA2CB680F200642B04 /* TemperatureView.swift in Sources */,
 				54F8BFCE2CB6812C00642B04 /* TimeView.swift in Sources */,
 				54F8BFBE2CB67FA400642B04 /* ContentView.swift in Sources */,

@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct TimeView: View {
+    let timeModel = MeasureViewModel(title: "⏱️ Time",
+                                      options: ["Seconds", "Minutes", "Hours"],
+                                      units: [
+                                        "Seconds": UnitDuration.seconds,
+                                        "Minutes": UnitDuration.minutes,
+                                        "Hours": UnitDuration.hours
+                                     ],
+                                      valueToConvert: 0,
+                                      unitToConvert: "Seconds",
+                                      unitConverted: "Minutes")
+    
     var body: some View {
-        Text("Time")
+        MeasureView(viewModel: timeModel)
     }
 }
 

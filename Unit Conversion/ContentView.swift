@@ -27,15 +27,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Volume", systemImage: "square.stack.3d.forward.dottedline")
                 }
-            
         }
-//        VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundStyle(.tint)
-//            Text("Hello, world!")
-//        }
-//        .padding()
     }
 }
 
