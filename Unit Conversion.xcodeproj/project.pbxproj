@@ -63,10 +63,10 @@
 		54F8BFBA2CB67FA400642B04 /* Unit Conversion */ = {
 			isa = PBXGroup;
 			children = (
-				542ED2342CC2B6B30044FC4A /* MeasureViewModel.swift */,
-				542ED2362CC2B7B70044FC4A /* MeasureView.swift */,
 				54F8BFBB2CB67FA400642B04 /* Unit_ConversionApp.swift */,
 				54F8BFBD2CB67FA400642B04 /* ContentView.swift */,
+				542ED2342CC2B6B30044FC4A /* MeasureViewModel.swift */,
+				542ED2362CC2B7B70044FC4A /* MeasureView.swift */,
 				54F8BFC92CB680F200642B04 /* TemperatureView.swift */,
 				54F8BFCB2CB6811C00642B04 /* LengthView.swift */,
 				54F8BFCD2CB6812C00642B04 /* TimeView.swift */,

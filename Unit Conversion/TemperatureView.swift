@@ -8,7 +8,7 @@
 import SwiftUI
 struct TemperatureView: View {
     let temperatureModel = MeasureViewModel(title: "🌡️ Temperature",
-                                      options: ["Meters", "Km", "Feet", "Yards", "Miles"],
+                                      options: ["Celsius", "Farenheit", "Kelvin"],
                                       units: [
                                         "Celsius": UnitTemperature.celsius,
                                         "Farenheit": UnitTemperature.fahrenheit,

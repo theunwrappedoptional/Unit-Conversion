@@ -10,17 +10,16 @@ import SwiftUI
 struct LengthView: View {
      
     let lengthModel = MeasureViewModel(title: "📏 Length",
-                                      options: ["Meters", "Km", "Feet", "Yards", "Miles"],
+                                      options: ["Meters", "Feet", "Yards", "Miles"],
                                       units: [
                                          "Meters": UnitLength.meters,
-                                         "Km": UnitLength.kilometers,
                                          "Feet": UnitLength.feet,
                                          "Yards": UnitLength.yards,
                                          "Miles": UnitLength.miles
                                      ],
                                       valueToConvert: 0,
                                       unitToConvert: "Meters",
-                                      unitConverted: "Km")
+                                      unitConverted: "Feet")
     
     var body: some View {
         MeasureView(viewModel: lengthModel)
